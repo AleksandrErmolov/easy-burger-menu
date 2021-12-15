@@ -1,6 +1,14 @@
 import './App.css';
+import Menu from './Menu/Menu';
 
 function App() {
+
+
+  const items = [{ value: "Главная", href: '/main', icon: 'favorite' },
+    { value: "Услуги", href: '/main', icon: 'verified' },
+    { value: "Магазин", href: '/service', icon: 'shopping_cart' },
+    { value: "Главная", href: '/main', icon: 'favorite' }]
+
   return (
     <div>
       <nav>
@@ -24,7 +32,7 @@ function App() {
 
 
       </main>
-
+<Menu header={"Бургер меню"} items={items}/>
     </div>
   );
 }

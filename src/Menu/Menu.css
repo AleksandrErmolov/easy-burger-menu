@@ -1,0 +1,15 @@
+.menu {
+position: fixed;
+width: 100vw;
+height: 100vh;
+top: 50px;
+left:0
+}
+
+blur {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+}
+
