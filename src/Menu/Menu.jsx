@@ -1,14 +1,14 @@
 import './Menu.css';
 
-function Menu({header, items  }) {
+function Menu({ header, items, active, setActive }) {
 
 
 console.log(items.icon)
 
     return (
-        <div className='menu'>
+        <div className={active ? "menu active" : "menu"} onClick={() => setActive(false)}>
             <div className='blur' />
-                <div className='menu__content'></div>
+                <div className='menu__content' onClick={e => e.stopPropagation()}>
             <div className='menu__header'> {header} </div>
             <ul>
                 {items.map((item, index) => 
@@ -19,7 +19,8 @@ console.log(items.icon)
                         </span>
 
                     </li>)}
-            </ul>
+                </ul>
+            </div>
         </div>
     );
 }
